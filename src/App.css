@@ -1,23 +1,24 @@
-/*    All    */
-
-.App {
-  text-align: center;
-  color:black;
+.title {
+  font-size: 40px;
+  background-color: #292929;
+  margin-top: 0;
+  color: white;
+  padding: 5% 0;
 }
-
-/*    /All    */
 
 .display-div {
   height: 100vh;
   width: 70%;
-  background-color: lightblue;
-  display:flex;
+  background-color: #add8e6;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .main-div {
   display: flex;
+  text-align: center;
+  font-family: Calibre, sans-serif;
 }
 
 #display {
@@ -30,27 +31,55 @@
 
 .slidecontainer {
   width: 30%;
-  height: 100%;
+  height: 100vh;
+  background-color: white;;  
 }
+
 .color-input {
-  padding:10px;
+  padding: 10px;
   background-color: transparent;
   border: 2px solid #ccc;
   border-radius: 5px;
 }
-.copy-div {
-  width:100%;
-  height: 30%;
+
+.copy-text {
+  margin-top: 100px;
+  border-top: solid;
+  border-bottom: solid;
+  padding: 10px 0;
+  border-width: 1px;
 }
+
 .slides {
-  width:100%;
-  margin-top:50%;
+  width: 100%;
+  margin-top: 50%;
   overflow: hidden;
+}
+.footer {
+  display:flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  background-color: #292929;
+  height: 50px;
+  width:30%;
+}
+img {
+  width:40px;
+  border-radius: 50px;
+  transition: all ease-in-out 0.3s;
+}
+img:hover {
+  background-color: rgb(83, 83, 83);
 }
 .slider {
   -webkit-appearance: none;
   appearance: none;
-  width: 100%;
+  border-radius: 10px;
+  width: 95%;
   height: 15px;
   background: #d3d3d3;
   outline: none;
@@ -61,16 +90,16 @@
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 25px;
-  height: 25px;
+  width: 15px;
+  height: 35px;
   background: #000000;
   cursor: pointer;
   border-radius: 20px;
 }
 
 .slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
+  width: 15px;
+  height: 35px;
   background: #000000;
   cursor: pointer;
   border-radius: 20px;
