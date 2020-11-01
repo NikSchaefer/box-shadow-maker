@@ -1,86 +1,77 @@
-
 /*    All    */
 
 .App {
   text-align: center;
+  color:black;
 }
-
-
-.vars {
-  --x-offset:20px;
-  --y-offset:20px;
-  --blur:20px;
-  --color:blue;
-}
-
 
 /*    /All    */
 
-
-/*    NavBar    */
-#header {
-position: fixed;
+.display-div {
+  height: 100vh;
+  width: 70%;
+  background-color: lightblue;
   display:flex;
-  flex-direction: row;
-  width:80%;
-  padding:0px 10%;
-  background-color: rgb(55, 205, 255);
-  align-content: space-between;
-  transition: all ease-in-out 0.3s;
+  justify-content: center;
   align-items: center;
-  border-bottom: none;
-  border-color:gray;
-  border-width:1px;
-  font-family: Open Sans,Helvetica Neue,Arial,sans-serif;
-  color:rgba(230, 230, 230, 0.8);
 }
 
-.nav-title {
-  font-size: 25px;
-  font-weight: 700;
-  transition:all ease-in-out 0.2;
-
-} .nav-title:hover {
-  color:rgb(150, 150, 150);
-  cursor: pointer;
-}
-.nav-link {
-  margin-left: auto;
-  font-size: 20px;
-  transition:all ease-in-out 0.2;
-} .nav-link:hover {
-  color:rgb(150, 150, 150);
-  cursor: pointer;
-}
-@media screen and (max-width:400px){
-  #header {
-    flex-direction: column;
-    align-content: center;
-  }
-  .nav-link{
-    margin-left:unset;
-  }
-}
-
-
-/*    /NavBar    */
-
-/*    Home    */
 .main-div {
-  position: relative;
-  width:100%;
-  height: 11vh;
-  
+  display: flex;
 }
 
+#display {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px black;
+}
 
-/*    /Home    */
+.slidecontainer {
+  width: 30%;
+  height: 100%;
+}
+.color-input {
+  padding:10px;
+  background-color: transparent;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+.copy-div {
+  width:100%;
+  height: 30%;
+}
+.slides {
+  width:100%;
+  margin-top:50%;
+  overflow: hidden;
+}
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 15px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity .2s;
+}
 
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #000000;
+  cursor: pointer;
+  border-radius: 20px;
+}
 
-/*    Footer    */
-
-
-
-/*    Footer    */
-
-
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #000000;
+  cursor: pointer;
+  border-radius: 20px;
+}
