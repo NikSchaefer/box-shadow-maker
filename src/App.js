@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import './App.css';
 import github from './Images/github.svg'
-import mail from './Images/mail.svg'
 
 function App() {
 
   const [xOffset, setXOffset] = useState(0)
   const [yOffset, setYOffset] = useState(0)
   const [blur, setBlur] = useState(10)
-  const [color, setColor] = useState('black')
+  const [transparency, setTransparency] = useState(70)
+  const [color, setColor] = useState('rgb(0, 0, 0)')
   const [code, setCode] = useState(null)
 
   const update = () => {
@@ -33,21 +33,20 @@ function App() {
     setBlur(e.target.value)
     update()
   }
+  const handleTransparency = (e) => {
+    setTransparency(e.target.value)
+    update()
+  }
   const handleColor = (e) => {
     setColor(e.target.value)
     update()
     update()
   }
-
   return (
     <div className='main-div'>
-
       <div className="slidecontainer">
-
         <p className='title'>Box Shadow Creator</p>
-
         <div className='slides'>
-
           <p className='slider-info'>X Offset: {xOffset}px</p>
           <input onChange={handleX} defaultValue='0' type="range" min="-400" max="400" className="slider" />
 
@@ -57,13 +56,14 @@ function App() {
           <p className='slider-info'>Blur: {blur}px</p>
           <input onChange={handleBlur} defaultValue='10' type="range" min="1" max="100" className="slider" />
 
+          <p className='slider-info'>Transparency: {transparency}%</p>
+          <input onChange={handleTransparency} defaultValue='70' type="range" min="0" max="100" className="slider" />
+
           <p className='slider-info'>Color: {color}</p>
-          <input onChange={handleColor} className="color-input" />
+          <input onChange={handleColor} defaultValue='rgb(0, 0, 0)' className="color-input" />
 
           <p>Copy the text below into your elements CSS</p>
           <p className='copy-text'>{`box-shadow: ${code};`}</p>
-
-
         </div>
       </div>
 
